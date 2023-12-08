@@ -11,39 +11,53 @@ var x = [
   "mist",
   "thunderstorm",
   "rain",
-  "snow",
+  "light snow",
   "haze",
   "broken clouds",
   "drizzle",
+  "overcast clouds",
+  "heavy intensity rain",
+  "smoke"
 ];
 //source
 var y = [
-  "icon/sunny.png",
-  "icon/overcast.png",
-  "icon/cloud.png",
+  "icon/clear.png",
+  "icon/cloudy-day.png",
+  "icon/cloudy.png",
   "icon/tornado.png",
-  "icon/fog.png",
-  "icon/showers.png",
-  "icon/rain.png",
-  "icon/thunderstorm.png",
+  "icon/snowshowers.png",
+  "icon/mist.png",
+  "icon/storm.png",
+  "icon/Light rain.png",
   "icon/snow.png",
-  "icon/fog.png",
+  "icon/snowshowers.png",
+  "icon/overcast.png",
+  "icon/drizzle.png",
+  "icon/cloudy.png",
+  "icon/rain.png",
+  "icon/wind.png",
+  
 ];
 var z = [
   "icon/clear.png",
-  "icon/night cloudy.png",
+  "icon/cloudy-day.png",
   "icon/cloudy.png",
   "icon/tornado.png",
-  "icon/fog.png",
-  "icon/showers.png",
-  "icon/night rain.png",
-  "icon/thunderstorm.png",
+  "icon/snowshowers.png",
+  "icon/mist.png",
+  "icon/storm.png",
+  "icon/rain.png",
   "icon/snow.png",
-  "icon/fog.png",
+  "icon/snowshowers.png",
+  "icon/overcast.png",
+  "icon/drizzle.png",
+  "icon/cloudy.png",
+  "icon/rain.png",
+  "icon/wind.png",
 ];
 function weather(input) {
   var city = input;
-  var im = (document.querySelector("#icon").src = "icon/clear.png");
+  var im = document.querySelector("#icon");
   var myurl = "https://api.openweathermap.org/data/2.5/weather?";
   var key = "547faf489fe6ea465e4b3aec4b56560e";
   var url = myurl + "appid=" + key + "&units=metric&q=" + city;
@@ -99,19 +113,28 @@ function weather(input) {
             im.src = z[6];
             break;
           case x[7]:
-            im.src = z[6];
+            im.src = z[7];
             break;
           case x[8]:
-            im.src = z[6];
+            im.src = z[8];
             break;
           case x[9]:
-            im.src = z[6];
+            im.src = z[9];
             break;
           case x[10]:
-            im.src = z[6];
+            im.src = z[10];
             break;
           case x[11]:
-            im.src = z[6];
+            im.src = z[11];
+            break;
+          case x[12]:
+            im.src = z[12];
+            break;
+          case x[13]:
+            im.src = z[13];
+            break;
+          case x[14]:
+            im.src = z[14];
             break;
         }
       } else if (dn >= day) {
@@ -152,6 +175,15 @@ function weather(input) {
             break;
           case x[11]:
             im.src = y[11];
+            break;
+          case x[12]:
+            im.src = y[12];
+            break;
+          case x[13]:
+            im.src = y[13];
+            break;
+          case x[14]:
+            im.src = y[14];
             break;
         }
       }
